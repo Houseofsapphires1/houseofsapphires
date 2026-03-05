@@ -11,9 +11,10 @@
 
 /* Colour palette */
 :root {
-  --dark: #0a3048;        /* primary background (deep sapphire) */
+  /* Updated colour palette to reflect the new branding */
+  --dark: #173d4a;        /* primary background (navy teal) */
   --mid:  #112f41;        /* secondary dark tone */
-  --accent: #d6b56a;      /* golden accent */
+  --accent: #d9af75;      /* golden accent matching the logo */
   --light: #f8f5f1;       /* off‑white for highlights */
 }
 
@@ -48,8 +49,10 @@ header {
   padding: 0.75rem 2rem;
 }
 
+/* Increase the size of the logo in the navigation to make it more prominent */
 .logo img {
-  height: 55px;
+  /* Make the navigation logo taller so it stands out at the top of the page */
+  height: 80px;
 }
 
 nav ul {
@@ -72,12 +75,19 @@ nav ul li a.active {
 
 /* Hero Section */
 .hero {
+  /* The hero now acts as an opening section rather than a background image.
+     It uses the primary dark colour as its background and centres the
+     contents vertically and horizontally. */
   height: 90vh;
   width: 100%;
+  background-color: var(--dark);
   background-size: cover;
   background-position: center;
   display: flex;
-  align-items: center;
+  /* Position the hero contents towards the top of the section so the logo sits
+     near the top centre of the viewport. The items will still be centred
+     horizontally but aligned to the start vertically. */
+  align-items: flex-start;
   justify-content: center;
   text-align: center;
   position: relative;
@@ -85,13 +95,14 @@ nav ul li a.active {
 }
 
 .hero::after {
+  /* Remove heavy dark overlay since the hero has a plain background. */
   content: '';
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.0);
 }
 
 .hero-overlay {
@@ -99,7 +110,8 @@ nav ul li a.active {
   z-index: 1;
   color: var(--light);
   max-width: 800px;
-  padding: 0 1rem;
+  /* Add top padding so the content doesn't start flush against the header */
+  padding: 3rem 1rem 0;
 }
 
 .hero-overlay h1 {
@@ -112,6 +124,16 @@ nav ul li a.active {
   font-size: 1.25rem;
   margin-bottom: 1.5rem;
   color: #e8e6e1;
+}
+
+/* Large logo in the hero section */
+/* Large logo in the hero section */
+.hero-logo {
+  /* Enlarge the hero logo so it dominates the opening section */
+  width: 350px;
+  max-width: 90%;
+  margin-bottom: 1.5rem;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5));
 }
 
 .btn,
@@ -273,8 +295,10 @@ h2 {
 
 /* Page Hero for inner pages */
 .page-hero {
+  /* Inner pages hero uses a solid background colour instead of an image. */
   height: 40vh;
   width: 100%;
+  background-color: var(--dark);
   background-size: cover;
   background-position: center;
   position: relative;
@@ -291,7 +315,7 @@ h2 {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.0);
 }
 
 .page-overlay {
@@ -420,6 +444,25 @@ h2 {
 
 .contact-social {
   margin-top: 1.5rem;
+}
+
+/* Contact methods list (used on contact page) */
+.contact-methods {
+  list-style: none;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  padding-left: 0;
+}
+.contact-methods li {
+  margin-bottom: 0.6rem;
+  font-size: 1.1rem;
+}
+.contact-methods a {
+  color: var(--accent);
+  text-decoration: none;
+}
+.contact-methods a:hover {
+  text-decoration: underline;
 }
 
 /* Footer */
