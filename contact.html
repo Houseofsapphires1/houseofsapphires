@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | House of Sapphires</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script defer src="assets/js/script.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <header>
+        <div class="container nav-container">
+            <a href="index.html" class="logo"><img src="assets/images/logo.png" alt="House of Sapphires logo"></a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="collections.html">Collections</a></li>
+                    <li><a href="lookbook.html">Lookbook</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero" style="background-image:url('assets/images/hero.png');">
+        <div class="page-overlay">
+            <h1>Contact Us</h1>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section fade-in">
+        <div class="container contact-container">
+            <div class="contact-form">
+                <h2>Get in Touch</h2>
+                <p>We’d love to hear from you! Fill out the form below and we’ll respond as soon as possible.</p>
+                <form action="mailto:contact@houseofsapphires.com" method="post" enctype="text/plain">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Optional">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Write your message here" required></textarea>
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+            </div>
+            <div class="contact-info">
+                <h2>Visit Us</h2>
+                <p><strong>Address:</strong> Plot 99, BSCIC Sopura, Rajshahi 6203, Bangladesh</p>
+                <p><strong>Phone:</strong> +880 1753‑002727</p>
+                <p><strong>Email:</strong> <a href="mailto:contact@houseofsapphires.com">contact@houseofsapphires.com</a></p>
+                <p><strong>Hours:</strong><br>
+                    Monday–Sunday: 11:00 AM – 11:30 PM</p>
+                <a href="https://maps.google.com/?q=House of Sapphires Rajshahi 6203 Bangladesh" target="_blank" class="btn-secondary">Open in Google Maps</a>
+                <div class="contact-social">
+                    <a href="https://www.facebook.com/houseofsapphires/" target="_blank"><img src="assets/icons/facebook.svg" alt="Facebook"></a>
+                    <a href="https://www.instagram.com" target="_blank"><img src="assets/icons/instagram.svg" alt="Instagram"></a>
+                    <a href="https://twitter.com" target="_blank"><img src="assets/icons/twitter.svg" alt="Twitter"></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 House of Sapphires. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
