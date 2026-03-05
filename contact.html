@@ -15,12 +15,17 @@
     <header>
         <div class="container nav-container">
             <a href="index.html" class="logo"><img src="assets/images/logo_final.png" alt="House of Sapphires logo"></a>
+            <!-- Mobile hamburger button -->
+            <button id="nav-toggle" aria-label="Toggle navigation">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="collections.html">Collections</a></li>
-                    <li><a href="lookbook.html">Lookbook</a></li>
                     <li><a href="direction.html">Direction</a></li>
                     <li><a href="contact.html" class="active">Contact</a></li>
                 </ul>
@@ -28,19 +33,13 @@
         </div>
     </header>
 
-    <!-- Page Hero -->
-    <section class="page-hero">
-        <div class="page-overlay">
-            <h1>Contact Us</h1>
-        </div>
-    </section>
+    <!-- Removed page hero to simplify the layout -->
 
     <!-- Contact Section -->
     <section class="contact-section fade-in">
         <div class="container contact-container">
             <div class="contact-info">
-                <h2>Contact Us</h2>
-                <p>If you’d like to reach out, choose one of the methods below:</p>
+                <!-- Remove the large "Contact Us" heading and description to streamline the page -->
                 <ul class="contact-methods">
                     <li><strong>Email:</strong> <a href="mailto:contact@houseofsapphires.com">contact@houseofsapphires.com</a></li>
                     <li><strong>Call:</strong> <a href="tel:+8801753002727">+880 1753 002727</a></li>
@@ -49,12 +48,15 @@
                 </ul>
                 <h2>Visit Us</h2>
                 <p>House of Sapphires, Rajshahi 6203, Bangladesh</p>
-                <a href="direction.html" class="btn-secondary">View Directions</a>
-                <div class="contact-social">
-                    <a href="https://www.facebook.com/houseofsapphires/" target="_blank"><img src="assets/icons/facebook.svg" alt="Facebook"></a>
-                    <a href="https://www.instagram.com/houseofsapphires.official/" target="_blank"><img src="assets/icons/instagram.svg" alt="Instagram"></a>
-                    <!-- Use the new WhatsApp icon for messaging -->
-                    <a href="https://wa.me/8801753002727" target="_blank"><img src="assets/icons/whatsapp.svg" alt="WhatsApp"></a>
+                <!-- Group the directions button and social icons together for better centring on mobile -->
+                <div class="contact-actions">
+                    <a href="direction.html" class="btn-secondary">View Directions</a>
+                    <div class="contact-social">
+                        <a href="https://www.facebook.com/houseofsapphires/" target="_blank"><img src="assets/icons/facebook.svg" alt="Facebook"></a>
+                        <a href="https://www.instagram.com/houseofsapphires.official/" target="_blank"><img src="assets/icons/instagram.svg" alt="Instagram"></a>
+                        <!-- Use the new WhatsApp icon for messaging -->
+                        <a href="https://wa.me/8801753002727" target="_blank"><img src="assets/icons/whatsapp.svg" alt="WhatsApp"></a>
+                    </div>
                 </div>
             </div>
         </div>
