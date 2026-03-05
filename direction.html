@@ -15,12 +15,17 @@
     <header>
         <div class="container nav-container">
             <a href="index.html" class="logo"><img src="assets/images/logo_final.png" alt="House of Sapphires logo"></a>
+            <!-- Mobile hamburger button -->
+            <button id="nav-toggle" aria-label="Toggle navigation">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="collections.html">Collections</a></li>
-                    <li><a href="lookbook.html">Lookbook</a></li>
                     <li><a href="direction.html" class="active">Direction</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
@@ -28,20 +33,13 @@
         </div>
     </header>
 
-    <!-- Page Hero -->
-    <section class="page-hero">
-        <div class="page-overlay">
-            <h1>Find Us</h1>
-        </div>
-    </section>
+    <!-- Removed page hero to simplify the layout -->
 
     <!-- Directions Section -->
     <section class="directions-section fade-in">
         <div class="container">
-            <h2>Find Your Way</h2>
-            <p>Use the interactive map below to preview our location in Rajshahi, Bangladesh and plan your journey to House of Sapphires.</p>
+            <!-- Embed a Google map showing our exact location with an embedded preview that doesn't require an API key. -->
             <div class="map-wrapper" style="margin-top:2rem;">
-                <!-- Embed a Google map showing our exact location with an embedded preview that doesn't require an API key. -->
                 <iframe
                     src="https://www.google.com/maps?q=House+of+Sapphires+Rajshahi+6203+Bangladesh&amp;output=embed"
                     width="100%" height="450" style="border:0;border-radius:8px;"
