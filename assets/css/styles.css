@@ -50,15 +50,64 @@ header {
 }
 
 /* Increase the size of the logo in the navigation to make it more prominent */
+/* Increase the size of the logo in the navigation to make it more prominent */
 .logo img {
   /* Make the navigation logo taller so it stands out at the top of the page */
-  height: 80px;
+  height: 100px;
 }
 
 nav ul {
   list-style: none;
   display: flex;
   gap: 1.5rem;
+}
+
+/* Navigation toggle button for mobile */
+#nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+#nav-toggle .bar {
+  width: 25px;
+  height: 3px;
+  background: var(--accent);
+  border-radius: 3px;
+}
+
+/* Mobile navigation */
+@media (max-width: 768px) {
+  header nav ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--dark);
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1rem 0;
+    display: none;
+    z-index: 999;
+  }
+  header nav ul.open {
+    display: flex;
+  }
+  #nav-toggle {
+    display: flex;
+  }
+  /* Reset list item margin in mobile nav */
+  header nav li {
+    margin: 0;
+  }
+  .nav-container {
+    justify-content: space-between;
+  }
 }
 
 nav ul li a {
@@ -128,12 +177,23 @@ nav ul li a.active {
 
 /* Large logo in the hero section */
 /* Large logo in the hero section */
+/* Large logo in the hero section */
 .hero-logo {
-  /* Enlarge the hero logo so it dominates the opening section */
-  width: 350px;
+  /* Further enlarge the hero logo so it dominates the opening section */
+  width: 600px;
   max-width: 90%;
   margin-bottom: 1.5rem;
   filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5));
+  /* Start hidden and shifted for a smooth entrance */
+  opacity: 0;
+  transform: translateY(-20px) scale(0.8);
+  transition: transform 1s ease, opacity 1s ease;
+}
+
+/* Show the hero logo once the page loads */
+.hero-logo.show {
+  opacity: 1;
+  transform: translateY(0) scale(1);
 }
 
 .btn,
@@ -337,6 +397,59 @@ h2 {
   margin-top: 2.5rem;
 }
 
+/* Center the collections section content */
+.collections-section {
+  text-align: center;
+}
+
+.collections-section .fb-page {
+  margin: 0 auto;
+}
+
+/* Center content and social icons in the contact page */
+.contact-container {
+  display: flex;
+  justify-content: center;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.contact-social {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+/* Wrap the directions button and social icons together and centre them */
+.contact-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.contact-actions .contact-social {
+  margin-top: 1rem;
+}
+
+/* Position the 'View Directions' button centrally within the contact methods */
+.contact-info a.btn-secondary {
+  margin-top: 1.5rem;
+  align-self: center;
+  display: inline-block;
+}
+
+/* Ensure the contact social icons sit below the button and remain centred */
+.contact-info .contact-social {
+  margin-top: 1.5rem;
+}
+
 .collection-detail {
   display: flex;
   flex-wrap: wrap;
@@ -394,6 +507,24 @@ h2 {
   background-color: var(--mid);
   padding: 2rem;
   border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+/* Photo grid for the collections page to display images from our latest collections */
+.photo-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.photo-grid img {
+  flex: 1 1 300px;
+  max-width: 350px;
+  border-radius: 8px;
+  height: 250px;
+  object-fit: cover;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
 }
 
