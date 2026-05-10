@@ -64,6 +64,37 @@ nav ul {
   gap: 1.5rem;
 }
 
+header nav {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.region-switcher {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  color: var(--accent);
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.region-switcher label {
+  color: var(--light);
+}
+
+.region-switcher select {
+  min-height: 34px;
+  border: 1px solid rgba(217, 175, 117, 0.6);
+  border-radius: 30px;
+  background-color: rgba(17, 47, 65, 0.9);
+  color: var(--accent);
+  font-family: inherit;
+  font-weight: 600;
+  padding: 0.35rem 2rem 0.35rem 0.75rem;
+  cursor: pointer;
+}
+
 /* Navigation toggle button for mobile */
 #nav-toggle {
   display: none;
@@ -130,22 +161,32 @@ nav ul {
 
 /* Mobile navigation */
 @media (max-width: 768px) {
-  header nav ul {
+  header nav {
     position: absolute;
     top: 100%;
     left: 0;
     right: 0;
     background: var(--dark);
+    display: none;
     flex-direction: column;
     align-items: center;
-    gap: 1.5rem;
+    gap: 1.25rem;
     padding: 1.25rem 0;
-    display: none;
     z-index: 999;
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.35);
   }
-  header nav ul.open {
+  header nav.open {
     display: flex;
+  }
+  header nav ul {
+    position: static;
+    background: transparent;
+    box-shadow: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 0;
   }
   #nav-toggle {
     display: flex;
@@ -267,6 +308,8 @@ nav ul li a.active {
 .btn {
   background-color: var(--accent);
   color: var(--dark);
+  border: 0;
+  font-family: inherit;
 }
 
 .btn:hover {
@@ -282,6 +325,55 @@ nav ul li a.active {
 .btn-secondary:hover {
   background-color: var(--accent);
   color: var(--dark);
+}
+
+.region-selector-page {
+  padding-top: 0;
+}
+
+.region-selector {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.region-selector-inner {
+  width: min(92%, 720px);
+}
+
+.region-selector-logo {
+  width: min(360px, 86vw);
+  margin-bottom: 2rem;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5));
+}
+
+.region-selector h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.35rem, 6vw, 4rem);
+  color: var(--light);
+  margin-bottom: 0.75rem;
+}
+
+.region-selector p {
+  color: #e8e6e1;
+  font-size: 1.05rem;
+}
+
+.region-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.region-message {
+  min-height: 1.5rem;
+  margin-top: 1.5rem;
+  color: var(--accent);
 }
 
 .about-preview,
