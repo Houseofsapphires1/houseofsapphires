@@ -22,14 +22,28 @@ document.addEventListener('DOMContentLoaded', () => {
   const navToggle = document.getElementById('nav-toggle');
   const navList = document.querySelector('header nav ul');
   if (navToggle && navList) {
+    navToggle.setAttribute('aria-expanded', 'false');
+
     navToggle.addEventListener('click', () => {
-      navList.classList.toggle('open');
+      const isOpen = navList.classList.toggle('open');
+      navToggle.classList.toggle('open', isOpen);
+      navToggle.setAttribute('aria-expanded', String(isOpen));
+    });
+
+    navList.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navList.classList.remove('open');
+        navToggle.classList.remove('open');
+        navToggle.setAttribute('aria-expanded', 'false');
+      });
     });
 
     // Close the mobile menu when the window is resized to a desktop width.
     window.addEventListener('resize', () => {
       if (window.innerWidth > 768 && navList.classList.contains('open')) {
         navList.classList.remove('open');
+        navToggle.classList.remove('open');
+        navToggle.setAttribute('aria-expanded', 'false');
       }
     });
   }

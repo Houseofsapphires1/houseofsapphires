@@ -15,11 +15,9 @@
     <header>
         <div class="container nav-container">
             <a href="index.html" class="logo"><img src="assets/images/logo_final.png" alt="House of Sapphires logo"></a>
-            <!-- Mobile hamburger button -->
+            <!-- Mobile menu button -->
             <button id="nav-toggle" aria-label="Toggle navigation">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
+                <span class="nav-gem"></span>
             </button>
             <nav>
                 <ul>
@@ -38,9 +36,31 @@
     <!-- Collections Content -->
     <section class="collections-section fade-in">
         <div class="container">
-            <!-- Embed our Facebook page timeline to display photos from our latest collections -->
-            <div class="fb-page" data-href="https://www.facebook.com/houseofsapphires/" data-tabs="timeline" data-width="1000" data-height="800" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
-                <blockquote class="fb-xfbml-parse-ignore" cite="https://www.facebook.com/houseofsapphires/"><a href="https://www.facebook.com/houseofsapphires/">House of Sapphires</a></blockquote>
+            <h2>Our Collection Feed</h2>
+            <p class="center-text">Explore our latest products and styles straight from our Facebook page. Scroll to see posts,
+                reels and announcements.</p>
+            <div class="collection-feed-layout">
+                <div class="collection-feature">
+                    <img src="assets/images/saree.png" alt="House of Sapphires saree collection">
+                    <div>
+                        <span>Featured Styles</span>
+                        <h3>Latest arrivals from House of Sapphires</h3>
+                        <p>Browse the live Facebook feed beside curated collection imagery, so the page still feels complete while new posts load vertically.</p>
+                    </div>
+                </div>
+                <!-- Embed our Facebook page timeline to display photos from our latest collections -->
+                <div class="fb-feed-shell">
+                    <div class="fb-page"
+                        data-href="https://www.facebook.com/houseofsapphires"
+                        data-tabs="timeline"
+                        data-width="500"
+                        data-height="760"
+                        data-small-header="false"
+                        data-adapt-container-width="true"
+                        data-hide-cover="false"
+                        data-show-facepile="false">
+                    </div>
+                </div>
             </div>
         </div>
     </section>
